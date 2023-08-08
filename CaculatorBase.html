@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Caculator</title>
+</head>
+<style>
+	button{
+		margin: 5px;
+	}
+</style>
+<body>
+<h2>Caculator</h2>
+<form>
+	<input type="number" placeholder="Enter number a" id="numa">
+	<input type="number" placeholder="Enter number b" id="numb">
+</form>
+<form>
+	<button onclick="add()" id="+">Addition(+)</button>
+	<button onclick="sub()" id="-">Addition(-)</button>
+	<button onclick="mul()" id="x">Addition(x)</button>
+	<button onclick="div()" id="/">Addition(/)</button>
+</form>
+<h2>Result:</h2>
+<p id="kq">Result value</p>
+<script>
+	function add() {
+		let a = +document.getElementById("numa").value;
+		let b = +document.getElementById("numb").value;
+		let add = a + b;
+		document.getElementById("kq").innerHTML = add;
+	}
+	
+	function sub() {
+		let a = +document.getElementById("numa").value;
+		let b = +document.getElementById("numb").value;
+		let sub = a - b;
+		document.getElementById("kq").innerHTML = sub;
+	}
+	
+	function mul() {
+		let a = +document.getElementById("numa").value;
+		let b = +document.getElementById("numb").value;
+		let mul = a * b;
+		document.getElementById("kq").innerHTML = mul;
+	}
+	
+	function div() {
+		let a = +document.getElementById("numa").value;
+		let b = +document.getElementById("numb").value;
+		let div = a / b;
+		document.getElementById("kq").innerHTML = div;
+	}
+</script>
+</body>
+</html>
